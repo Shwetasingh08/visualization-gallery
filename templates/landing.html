@@ -1,0 +1,165 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+
+{% block css %}
+
+<Style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.introduction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:70vh ;
+    margin: .2rem;
+    font-size: 2rem;
+    padding: 1rem;     
+    text-align: center;
+    background-color:rgb(253, 251, 252);
+}
+button{
+    border: 1px solid rgb(100, 4, 84);
+    text-decoration: none;
+    padding: 5 rem 1rem;
+    font-family: calibri;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30%;
+    border-radius: 1rem;
+    margin: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: none;
+    height: 3rem; 
+    color: rgb(142, 109, 219);   
+}
+button:hover{
+    background-color: rgb(137, 135, 235);
+    color: rgb(180, 88, 88);
+    border: 1px solid rgb(111, 8, 172);
+}
+.graph{
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: .2rem;
+    font-size: 2rem;
+    padding: 1rem; 
+    background-color:rgb(92, 3, 61);
+    
+    
+    
+}
+.content{
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: .2rem;
+    font-size: 2rem;
+    padding: 1rem; 
+   
+    
+    
+}
+.left, .right{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+</Style>
+    
+{% endblock %}
+{% block content %}
+ 
+<section class="introduction">
+    <h1> Show your Createvity online.</h1>
+    <h2>On all key channels. With just one platform.</h2>
+    <p> you can create, manage, and optimize your online presence across all key channels. From a single platform, you can distribute content to all relevant channels and analyze its success.</p>
+    <button>LET'S Try now </button>
+</section>
+<section class="graph">
+    <div class="left">
+        <header>
+            <h2>Graph's</h2>
+          <p>Build charts your team can actually understand</p>
+          </header>
+          <p>
+            Start from Observable Plot rather than scratch with plug-and-play code snippets that accelerate your ability to turn complex data into clear, visual stories.
+          </p>
+          
+          <button>LET'S Try now </button>
+          
+    </div>
+    <div class="right">
+        <a class="navbar-brand" href="#">
+            <img src="{% static '/images/s.jpg' %}" alt="" height="350">
+        
+        </a>
+    </div>
+  </section>
+<section class="content">
+    <div class="right">
+        <a class="navbar-brand" href="#">          
+            <img src="{% static '/images/h.gif' %}" alt="" height="350">
+        </a>
+    </div>
+    <div class="left">
+        <header>
+            <h2>CONNECT</h2>
+          <p>Bring multiple data sources into a single view</p>
+          </header>
+          <p>
+            Securely integrate your data from the cloud, database, and local files into one place without installing anything, for anyone. Ever.
+          </p>
+          <button>See data integrations </button>
+    </div>
+  </section>
+  <section class="graph">
+    <div class="left">
+        <header>
+            <h2>ACCELERATE</h2>
+          <p>Make data-driven decisions in fewer meetings</p>
+          </header>
+          <p>
+            Facilitate deeper, more inclusive conversations with cross-functional collaborators and stakeholders, and move projects forward with less back-and-forth.
+          </p>
+          <button >LET'S Try now </button>
+    </div>
+    <div class="right">
+        <a class="navbar-brand" href="#">
+            <img src="{% static '/images/s.jpg' %}" alt="" height="350">
+        </a>
+    </div>
+  </section>
+  <section class="introduction">
+    <h1> Start growing your visibility today</h1>
+    <h2>Get free 7-day access to all toolkits. Cancel anytime..</h2>
+       <button class="payment">
+        <a href="{% url 'payment' %}">
+        LET'S Try now </button></a>
+</section>
+
+
+
+{% endblock %}
+{% block js %}
+    
+{% endblock %}
